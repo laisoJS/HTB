@@ -1,0 +1,463 @@
+/* ==UserStyle==
+@name           Hack the box Catppuccin
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Soothing pastel theme for HTB
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://account.hackthebox.com"), url-prefix("https://app.hackthebox.com") {
+	:root {
+		--rosewater: #f4dbd6;
+		--flamingo: #f0c6c6;
+		--pink: #f5bde6;
+		--mauve: #c6a0f6;
+		--red: #ed8796;
+		--red-opacity50: #ed8796bb;
+		--maroon: #ee99a0;
+		--peach: #f5a97f;
+		--yellow: #eed49f;
+		--green: #a6da95;
+		--teal: #8bd5ca;
+		--sky: #91d7e3;
+		--sapphire: #7dc4e4;
+		--blue: #8aadf4;
+		--lavander: #b7bdf8;
+		--text: #cad3f5;
+		--subtext1: #b8c0e0;
+		--subtext0: #a5adcb;    
+		--overlay2: #939ab7;
+		--overlay1: #8087a2;
+		--overlay0: #6e738d;
+		--surface2: #5b6078;
+		--surface1: #494d64;
+		--surface0: #363a4f;
+		--base: #24273a;
+		--mantle: #1e2030;
+		--crust: #181926;
+	}
+    
+	
+	body,
+   .main-auth-page-content,
+	#app.v-application {
+		background-color: var(--base) !important;
+	}
+	
+	
+	/*
+		TEXT
+	*/
+	.auth-title,
+	.htb-subtitle2,
+	.fontSemiBold,
+	.fontMedium,
+	span.color-green,
+	#forgot-password-link {
+		color: var(--lavander) !important;
+	}
+	
+	.fontRegular,
+	.htb-text-secondary,
+	#login-page form input,
+	#register-page form input,
+	#forgot-password-page form input,
+	.v-navigation-drawer__content .v-list--nav a span,
+	.text-left .color-main {
+		color: var(--text) !important;
+	}
+	
+	#forgot-password-link:hover,
+	#forgot-password-link:focus {
+		color: var(--green) !important;
+	}
+	
+	/*
+		APP NAV
+	*/
+	#app nav {
+		background-color: var(--mantle) !important;
+	}
+	
+	#app nav .v-navigation-drawer__prepend button span {
+		background-color: var(--crust) !important;
+	}
+	
+	#app nav .menu-icon-items-with-borders .menu-item-active {
+		background: var(--crust);
+	}
+	
+	.v-navigation-drawer__content .v-list--nav .menu-item:hover,
+	.v-navigation-drawer__content .v-list--nav .menu-item:focus,
+	.v-list--nav .v-list-item:hover,
+	.v-list--nav .v-list-item:focus,
+	.v-list-item--active {
+		background: var(--crust);
+	}
+	
+	.v-list--nav .menu-item:hover span,
+	.v-list--nav .menu-item:focus span,
+	.v-list--nav .v-list-group:hover .v-list-item__title,
+	.v-list--nav .v-list-group:focus .v-list-item__title,
+	.v-list-item--active .v-list-item__content .v-list-item__title span,
+	.v-list-item--active .v-list-item__title {
+		color: var(--lavander) !important;
+	}
+	
+	
+	.v-list--nav .menu-item:hover i.menu-icon,
+	.v-list--nav .menu-item:focus i.menu-icon,
+	.v-list--nav .v-list-group:hover i.menu-icon,
+	.v-list--nav .v-list-group:focus i.menu-icon,
+	.v-list-item--active .v-list-item__icon  i.menu-icon {
+		background: var(--lavander) !important;
+	}
+	
+	#app nav .v-list hr[role="separator"] {
+		border: 1px solid var(--surface0) !important;
+	}
+	
+	#app nav .v-navigation-drawer__append {
+		border-top: 1px solid var(--base);
+		background: var(--crust);
+	}
+	#app nav .v-navigation-drawer__append .v-list-item__icon i {
+		color: var(--text);
+	}
+	
+	
+	/*
+		APP HEADER
+	*/
+	header#topnavbar {
+		background: var(--mantle) !important;
+	}
+	
+
+	header #navbarActions .profileWrapper,	
+	header #navbarActions .profileWrapper:hover,
+	header #navbarActions .profileWrapper:focus {
+		background: var(--crust) !important;
+	}
+	
+	header #navbarActions span.activeMenuDialog,
+	header #navbarActions span.menuDialogInner:hover,
+	header #navbarActions span.menuDialogInner:focus {
+		background: var(--crust) !important;
+	}
+	
+	header #navbarActions span.menuDialogInner {
+		border: none !important;
+		background: var(--mantle);
+	}
+	
+	span.connectionTutorial button {
+		background: var(--red) !important;
+	}
+	
+	span.connectionTutorial button:hover {
+		background-color: var(--red-opacity50) !important;
+	}
+	
+	span.connectionTutorial button span {
+		color: var(--crust) !important;
+	}
+	
+	span.connectionTutorial button.btn-fix span i.v-icon {
+		background-color: var(--crust) !important;
+	}
+	
+	#connectionSettings .side-style {
+		background: var(--mantle);
+	}
+	
+	#connectionSettings .side-style .hoverCardBtn {
+		border: 1px solid var(--surface0);
+		background-color: var(--mantle) !important;
+	}
+	
+	#connectionSettings .side-style .hoverCardBtn:hover,
+	#connectionSettings .side-style .hoverCardBtn:focus,
+	#connectionSettings .side-style .cursorPointer:hover, 
+	#connectionSettings .side-style .cursorPointer:focus {
+		border: none !important;
+		background-color: var(--crust) !important;
+	}
+	
+	#connectionSettings .side-style .text-left .color-main {
+		color: var(--text) !important;
+	}
+	
+	
+	.hoverCardBtn .avatar .offline {
+		background: var(--red) !important;
+	}
+	
+	.hoverCardBtn span.color-red {
+		color: var(--red) !important;
+	}
+	
+	.SearchBars .v-select-list {
+		background: var(--mantle) !important;
+	}
+	
+	.SearchBars .v-list .listItem span {
+		color: var(--text);
+	}
+	
+	.theme--dark .menuDialog .v-list {
+		background-color: var(--mantle) !important;
+	}
+	
+	.theme--dark .menuDialog .bg-color-blue-nav {
+		background: var(--crust) !important;
+	}
+	
+	.theme--dark .menuDialog .v-list-item__title span {
+		color: var(--text) !important;
+	}
+	
+	.theme--dark .text-wrap button.btn-fix span {
+		color: var(--lavander) !important;
+	}
+	
+	.theme--dark .text-wrap button.btn-fix,
+	.theme--dark .text-wrap button.btn-fix::before {
+		background: var(--crust) !important;
+	}
+	
+	.theme--dark .switchButton .v-input--switch__track {
+		background: var(--red);
+	}
+	
+	.theme--dark .switchButton .v-input--switch__track.primary--text {
+		background: var(--green) !important;
+	}
+	
+	.theme--dark .v-list div[role="menuitem"]:hover,
+	.theme--dark .v-list div[role="menuitem"]:focus,
+	.theme--dark .v-list div[role="menuitem"].on-hover:hover,
+	.theme--dark .v-list div[role="menuitem"].on-hover:focus {
+		background: var(--crust) !important;
+	} 
+	
+	
+	
+	/*
+		APP MAIN
+	*/
+	.container.homeTop {
+		background: var(--base)!important;
+	}
+	
+	.homeTop .spacingBothSides .homeTop {
+		background: var(--base) !important;
+	}
+	
+	.homeTop .linkbox,
+	.homeTop .pt-4 div span span {
+		color: var(--text);
+	}
+	
+	.homeTop .linkbox:hover,
+	.homeTop .linkbox:focus {
+		color: var(--green);
+	}
+	
+	.homeTop .pt-4 div span {
+		color: var(--lavander);
+	}
+	
+	/* Stats charts */
+	.statsHeight {
+		background: var(--mantle) !important;
+	}
+	
+	.statsHeight .text-left p,
+	.statsHeight .htb-label span.color-main {
+		color: var(--text) !important;
+	}
+	
+	.statsHeight .htb-label span.color-green {
+		color: var(--lavander) !important;
+	}
+	
+	.statsHeight .progressBarWrapper .v-progress-linear__background,
+	.spacingBothSides .carousel .slide .flags .v-progress-linear__background {
+		background: var(--surface2) !important;
+	}
+	
+	.statsHeight .progressBarWrapper .v-progress-linear__determinate,
+	.spacingBothSides .carousel .slide .flags .v-progress-linear__determinate {
+		border: none !important;
+		background: var(--lavander) !important
+	}
+	
+	.statsHeight .hc g.highcharts-series path {
+		stroke-width: 1px;
+		stroke: var(--lavander);
+	}
+	.statsHeight .hc g.highcharts-markers path {
+		fill: var(--lavander);
+	}
+	
+	.statsHeight .htb-label {
+		color: var(--green) !important;
+	}
+	
+	.statsHeight .rankUp {
+		background: var(--surface0) !important;
+	}
+	.statsHeight .rankUp i {
+		background: var(--green) !important;
+	}
+	
+	.statsHeight .cardRightSide .htb-text2,
+	.statsHeight .cardRightSide span.color-green{
+		color: var(--lavander) !important;
+	}
+	
+	/* Overview - Recomended - In progress - to-do - Knowledge */
+	.spacingBothSides .v-tabs .v-tabs-slider-wrapper .primary {
+		background-color: var(--lavander) !important;
+	}
+	
+	.spacingBothSides .v-item-group .v-tab[role="tab"] {
+		color: var(--text) !important;
+	}
+	
+	.spacingBothSides .v-item-group .v-tab--active[role="tab"] {
+		color: var(--lavander) !important;
+	}
+	
+	/* Cards */
+	.spacingBothSides .carousel .slide {
+		background-color: var(--mantle) !important;
+	}
+	
+	.spacingBothSides .carousel .slide .flags .greyLabel {
+		color: var(--text);
+		background: var(--surface0);
+	}
+	
+	.spacingBothSides .carousel .slide .flags .userOwn {
+		background: var(--crust) !important;
+	}
+	
+	.spacingBothSides .text-right span.dash {
+		color: var(--surface1);
+	}
+	
+	.spacingBothSides .text-right span.dash.active {
+		color: var(--lavander);
+	}
+	
+	
+	/*
+		FORM
+	*/
+	#login-page,
+	#register-page,
+	#forgot-password-page .auth-card {
+		background-color: var(--mantle) !important;
+	}
+	
+	#login-page form .v-field__overlay,
+	#register-page form .v-field__overlay,
+	#forgot-password-page form .v-field__overlay {
+		background-color: var(--crust);
+	}
+	
+	/* Remember-me Checkbox */
+	.checkbox-styling.v-checkbox .v-selection-control__input .v-icon {
+		color: var(--crust) !important;
+	}
+	
+	.v-selection-control--dirty i {
+		background-color: var(--green) !important
+	}
+	
+	.mdi-eye,
+	.mdi-eye-off {
+		color: var(--lavander);
+	}
+	
+	#loginPassword-messages .v-messages__message,
+    #forgotPasswordEmail-messages .v-messages__message,
+    #registerEmail-messages .v-messages__message {
+		color: var(--red);
+	}
+	
+
+	/*
+		Sign in btn
+	*/
+	/* deactivated */
+	button.htb-button--primary[disabled=""] {
+		background-color: var(--surface0) !important;
+	}
+	
+	button.htb-button--primary[disabled=""] div {
+		color: var(--text);
+	}
+	
+	/* activated */
+	button.htb-button--primary {
+		border: 1px solid var(--base);
+		background-color: var(--lavander) !important;
+	}
+	
+	button.htb-button--primary div {
+		color: var(--crust);
+	}
+	
+	
+	/*
+		External login
+	*/
+	.htb-border-01[data-v-fa3644da] {
+		border: 1px solid var(--surface0);
+	}
+	
+	hr.divider-text::after {
+		color: var(--text) !important;
+		background-color: var(--mantle) !important;
+	}
+	
+	button.htb-button--outlined {
+		outline: none !important;
+		border: 1px solid var(--text);
+	}
+	
+	button.htb-button--outlined:hover,
+	button.htb-button--outlined:focus {
+		border: 3px solid var(--lavander);
+		background-color: var(--surface0) !important;
+	}
+	
+	/* text + icon */
+	button.htb-button--outlined div,
+	button.htb-button--outlined svg {
+		color: var(--text);
+	}
+	
+	a.htb-link--primary,
+	a.htb-link--primary div {
+		color: var(--lavander) !important;
+	}
+	
+	
+	/*
+		FOOTER
+	*/
+	.footer {
+		background-color: var(--mantle);
+	}
+	
+	.footer div {
+		color: var(--text);
+	}
+}
+
+
+
